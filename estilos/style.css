@@ -17,7 +17,7 @@ body {
 
 
 .cabecalho{
-    padding: 4% 0 0 15%;
+    padding: 2% 0% 0% 15%;
 }
 
 .cabecalho__home{
@@ -28,7 +28,7 @@ body {
 
 .cabecalho__home__link{
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: rgb(15, 125, 189);
     text-decoration: none;
@@ -36,27 +36,28 @@ body {
 
 .cabecalho__sobremim__link{
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: rgb(15, 125, 189);
     text-decoration: none;
 }
 
 .apresentacao {
-    padding: 10% 15%;
+    padding: 5% 15%;
     /* margin: 10% 15%; Tamanho das margens na pagina */
     display: flex;/* Permite que haja uma ediçao na posição das marjens, é o elemento PAI*/
     align-items: center;/*Centraliza as margens na pagina*/
     justify-content: space-between;/* adiciona o espaçamento entre as margem*/
+    gap: 82px;
 }
 .apresentacao__conteudo{
-    width: 615px; /*Define a largura de uma area, mas se box-sizing estiver definido como border-box, define a largura da área da borda */
+    width: 50%; /*Define a largura de uma area, mas se box-sizing estiver definido como border-box, define a largura da área da borda */
     display:flex;/* O flex permite a edição do elementos dentro do conteiner, para encaixar em qualquer tamanho de tela*/
     flex-direction: column;/*permite alterar a direção na qual os elementos flex serão exibidos ao longo do eixo principal.*/
     gap: 40px;/* Gap define os espaços (gutters (en-US)) entre as linhas e colunas. */
 }
 .apresentacao__conteudo__titulo {
-    font-size: 30px;/*Altera o tamanho do texto*/
+    font-size: 2.25rem;/*Altera o tamanho do texto*/
     font-family: 'Krona One', sans-serif;/*permite que se faça uma lista de prioridades de familias de fontes e/ou nomes genéricos de famílias a serem especificados para um elemento selecionado.*/
 }
 
@@ -69,12 +70,12 @@ body {
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Mont Serrat', sans-serif;
 }
 
 img{
-    width: 46%;
+    width: 66%;
 }
 
 .apresentacao__links{
@@ -88,17 +89,17 @@ img{
 .apresentacao__links__subtitulo{
     font-family: 'Krona One', sans-serif;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1.5rem;
 }
 
-.apresentacao__links__link{
+.apresentacao__links__navegacao{
     display:flex;
     justify-content: center;
     gap: 16px;
-    width: 378px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;/* Esta propriedade permite arredondar as bordas de um elemento.*/
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;/*Peso da fonte*/
     padding: 21.5px 0;
     text-decoration: none;/*Decoração do texto dentro da padding*/
@@ -108,8 +109,12 @@ img{
 
 }
 
-.apresentacao__links__link:hover{
+.apresentacao__links__navegacao:hover{
     background-color: #06728a;
+}
+
+.apresentacao__imagem {
+    width: 50%;
 }
 
 .rodape{
@@ -118,6 +123,7 @@ img{
     background-color: #06728a;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
     font-weight: 400;
     
 }
@@ -128,6 +134,25 @@ img{
 
 .tamanho__icon__github{
     width: 9%;
+}
+
+@media (max-width: 1105px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__home {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+        
+    }
 }
 
 
