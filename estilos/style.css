@@ -96,7 +96,7 @@ img{
     display:flex;
     justify-content: center;
     gap: 16px;
-    width: 50%;
+    width: 40%;
     text-align: center;
     border-radius: 8px;/* Esta propriedade permite arredondar as bordas de um elemento.*/
     font-size: 1.5rem;
@@ -129,7 +129,7 @@ img{
 }
 
 .tamanho__icon__insta{
-    width: 9%;
+    width: 10%;
 }
 
 .tamanho__icon__github{
