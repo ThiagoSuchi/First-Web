@@ -129,11 +129,13 @@ img{
 }
 
 .tamanho__icon__insta{
-    width: 10%;
+    width: 30px;
+    height: 30px;
 }
 
 .tamanho__icon__github{
-    width: 9%;
+    width: 29px;
+    height: 29px;
 }
 
 @media (max-width: 1105px) {
