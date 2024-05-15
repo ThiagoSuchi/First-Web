@@ -78,6 +78,11 @@ img {
     opacity: 1;
 }
 
+.done {
+    background-color:  #98b660;
+    text-decoration: line-through;
+}
+
 
 
 
