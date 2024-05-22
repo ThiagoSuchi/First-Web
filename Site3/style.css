@@ -1,51 +1,165 @@
 /* ESTILO GERAL */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-color: rgb(44, 42, 42);
+body {
+    background: linear-gradient(40deg, #060606,#2d2e2e,#464647,#6b6b6c,#969798);
+    animation: colors 35s ease infinite;
+    background-size: 200% 200%;
     height: 100vh;
 }
 
-.interface{
+@keyframes colors{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 40%;
+    }
+}
+
+.interface {
     margin: 0 auto;
 }
 
-.imagem-logo-agnuz{
-    width: 140px;
+.flex{
+  display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #e7ce2e;
+    border-radius: 15px;
+    border: 0;
+    cursor: pointer;
 }
 
 
 /* ESTILO DO CABEÇALHO*/
 
-header{
-    padding: 40px 4%;
+
+.imagem-logo-agnuz {
+    width: 350px;
+    padding: 20px 4%;
 }
 
-header > .interface{
+.imagem-logo-agnuz:hover {
+    transform: scale(1.60);
+    transition: .3s;
+}
+
+header {
+    padding: 30px 4%;
+}
+
+header>.interface {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
-header a{
-    color: #fff;
+header>.interface .btn-contato{
+    display: flex;
+    gap: 30px;
+}
+
+header ul li a {
+    color: #8a8585;
     text-decoration: none;
+    display: inline-block;
+}
+
+header ul li a:hover {
+    color: white;
+    transform: scale(1.05);
+    transition: .2s;
 }
 
 header nav ul {
     list-style-type: none;
+    /* A propriedade CSS define o marcador (como um disco, caractere ou estilo de contador personalizado) de um elemento de item de lista.list-style-type */
 }
 
-header nav ul li{
+header nav ul li {
     display: inline-block;
-    padding: 0 40px;
+    padding: 40px;
 }
 
-header .btn-contato button{
-    padding: 10px 40px;
+.btn-contato button:hover {
+    box-shadow: 0px 0px 8px #ffdd00;
+    transform: scale(1.05);
+    transition: .2s;
 }
+
+
+/* ESTILO DO TOPO DO SITE */
+
+
+section.topo-do-site{
+    padding: 85px 10%;
+
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+}
+
+.topo-do-site h1{
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: rgb(249, 248, 246);
+    text-shadow: #cb09b5 4px 2px 2px;
+}
+
+.topo-do-site h2{
+    color: rgb(176, 173, 173);
+    font-weight: 400;
+}
+
+.topo-do-site h2 span{
+    font-weight: 980;
+}
+
+
+.destaque-foco {
+    font-weight: 980;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: rgb(176, 173, 173);
+    margin: 50px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: levitar 3s ease-in-out infinite alternate;
+    box-shadow: 10px 15px 10px #cb09b5;
+    border-radius: 50%;
+}
+
+@keyframes levitar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+
+
