@@ -4,44 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <!--Google fonts fim-->
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Bootstrap icons fim-->
+    <link rel="stylesheet" href="style.css">
     <title>Agnuz Profit</title>
 </head>
 
-<body>
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="#">
-                    <img class="imagem-logo-agnuz" src="img/agnuz.png" alt="Logo site agnuz">
-                </a>
-            </div><!--logo-->
+<body class="corpo-pagina">
+    <section id="inicio-cabeçalho">
+        <header class="interface-int">
+            <div class="interface">
+                <div class="logo">
+                    <a href="#">
+                        <img class="imagem-logo-agnuz" src="img/agnuz.png" alt="Logo site agnuz">
+                    </a>
+                </div><!--logo-->
 
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Especialidades</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
-                </ul>
-            </nav>
+                <nav class="menu-desktop">
+                    <ul>
+                        <li><a class="estilo-cbç" href="#inicio-cabeçalho">Inicio</a></li>
+                        <li><a class="estilo-cbç" href="#produtos-link">Produtos</a></li>
+                        <li><a class="estilo-cbç" href="#">Sobre</a></li>
+                        <li><a class="estilo-cbç" href="#">Suporte</a></li>
+                    </ul>
+                </nav>
 
-            <div class="btn-contato">
-                <a href="#">
-                    <button>login</button>
-                </a>
                 <div class="btn-contato">
                     <a href="#">
-                        <button>cadastrar</button>
+                        <button>Entrar</button>
                     </a>
-                </div>
+                    <div class="btn-contato">
+                        <a href="#">
+                            <button>cadastrar</button>
+                        </a>
+                    </div>
             </div><!--interface-->
-    </header>
+        </header>
+    </section><!--inicio-cabeçalho-->
 
     <main>
         <section class="topo-do-site">
@@ -51,12 +58,19 @@
 
                         <h1>Desperte sua Melhor Versão com nossos Produtos Fitness<span>!</span> </h1>
                         <div class="txt-animado">
-                            <h2>Entregaremos para você a sede em ter <strong class="destaque-foco"> FOCO </strong> - 
+                            <h2>Entregaremos para você a sede em ter <strong class="destaque-foco"> FOCO </strong> -
                                 <span>F</span>omentar <span>O</span> sucesso, <span>C</span>riando
-                                <span>O</span>portunidade.</h2>
-                         </div><!--txt-animado-->
+                                <span>O</span>portunidade.
+                            </h2>
+                        </div><!--txt-animado-->
 
-                        <p> Você já imaginou como seria viver a vida no seu potencial máximo? Seja você um(a) atleta de alto desempenho ou alguém que está apenas começando sua jornada de bem-estar, aqui na AGNUZ, temos tudo o que você precisa para transformar seus objetivos em realidade. Nossa coleção cuidadosamente selecionada de produtos não é apenas sobre exercícios. É sobre uma mentalidade. É sobre se comprometer com o seu sucesso, dedicar-se ao seu bem-estar e alcançar novos patamares que você jamais imaginou serem possíveis. VENDEMOS ALTA PERFORMANCE, e de brinde você leva qualidade🏆</p>
+                        <p> Você já imaginou como seria viver a vida no seu potencial máximo? Seja você um(a) atleta de
+                            alto desempenho ou alguém que está apenas começando sua jornada de bem-estar, aqui na AGNUZ,
+                            temos tudo o que você precisa para transformar seus objetivos em realidade. Nossa coleção
+                            cuidadosamente selecionada de produtos não é apenas sobre exercícios. É sobre uma
+                            mentalidade. É sobre se comprometer com o seu sucesso, dedicar-se ao seu bem-estar e
+                            alcançar novos patamares que você jamais imaginou serem possíveis. VENDEMOS ALTA
+                            PERFORMANCE, e de brinde você leva qualidade🏆</p>
 
                         <div class="btn-contato">
 
@@ -76,6 +90,58 @@
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--topo-do-site-->
+
+        <section id="produtos-link" class="produtos">
+            <div class="interface">
+                <h2 class="titulo"> ESTILO, SAÚDE E <span>QUALIDADE DE VIDA.</span></h2>
+                <div class="flex">
+                    <nav class="cabecalho-home">
+                        <a class="cabecalho-MODA-link" href="about.html">
+                            <div class="produtos-box">
+                                <i class="bi bi-person-walking"></i>
+                                <h3>MODA-FIT</h3>
+                                <p>Do conforto à performance, oferecemos uma variedade de peças para elevar seu
+                                    jogo. Descubra o equilíbrio perfeito entre moda e funcionalidade. Vista-se para
+                                    o sucesso!"
+                                </p>
+                            </div><!--produtos-box-->
+                        </a><!--cabecalho-MODA-link-->
+                    </nav><!--cabecalho-home-->
+
+                    <div class="produtos-box">
+                        <i class="bi bi-dribbble"></i>
+                        <h3>ARTIGOS ESPORTIVOS</h3>
+                        <p>De equipamentos de treino a acessórios de alta performance, oferecemos tudo o que você
+                            precisa para alcançar o seu potencial máximo. Seja qual for o seu esporte ou atividade,
+                            estamos aqui para equipá-lo com o melhor.</p>
+                    </div><!--produtos-box-->
+
+                    <div class="produtos-box">
+                        <i class="bi bi-capsule"></i>
+                        <h3>SUPLEMENTOS</h3>
+                        <p>Potencialize seus resultados fitness com nossa seleção premium de suplementos! Desde
+                            proteínas e aminoácidos até vitaminas essenciais, temos tudo que você precisa para
+                            alcançar seus objetivos de saúde e bem-estar.</p>
+                    </div><!--produtos-box-->
+
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--produtos-->
+
+        <section class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="img/" alt="">
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+
+                    </div><!--txt-sobre-->
+
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--sobre-->
     </main>
 
 </body>

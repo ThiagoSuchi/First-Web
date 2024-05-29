@@ -8,9 +8,11 @@
 
 body {
     background: linear-gradient(40deg, #060606,#2d2e2e,#464647,#6b6b6c,#969798);
-    animation: colors 35s ease infinite;
-    background-size: 200% 200%;
-    height: 100vh;
+    animation: colors 15s ease alternate infinite;
+    place-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background-size: 300% 300%;
 }
 
 @keyframes colors{
@@ -43,6 +45,17 @@ body {
     cursor: pointer;
 }
 
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+h2.titulo span{
+    color: #c3aa08;
+}
+
 
 /* ESTILO DO CABEÇALHO*/
 
@@ -54,7 +67,7 @@ body {
 
 .imagem-logo-agnuz:hover {
     transform: scale(1.60);
-    transition: .3s;
+    transition: .7s;
 }
 
 header {
@@ -71,16 +84,17 @@ header>.interface .btn-contato{
     gap: 30px;
 }
 
-header ul li a {
-    color: #8a8585;
+.interface-int li a {
+    color: #bab9b9;
     text-decoration: none;
     display: inline-block;
 }
 
-header ul li a:hover {
+.interface-int ul li a:hover {
     color: white;
     transform: scale(1.05);
     transition: .2s;
+    text-shadow: 0px 0px 10px #040403;
 }
 
 header nav ul {
@@ -90,12 +104,12 @@ header nav ul {
 
 header nav ul li {
     display: inline-block;
-    padding: 40px;
+    padding: 15px 40px;
 }
 
 .btn-contato button:hover {
-    box-shadow: 0px 0px 8px #ffdd00;
-    transform: scale(1.05);
+    box-shadow: 0px 0px 5px #ffdd00;
+    transform: scale(1.00);
     transition: .2s;
 }
 
@@ -104,8 +118,7 @@ header nav ul li {
 
 
 section.topo-do-site{
-    padding: 85px 10%;
-
+    padding: 85px 7%;
 }
 
 section.topo-do-site .flex{
@@ -148,7 +161,7 @@ section.topo-do-site .flex{
 .topo-do-site .img-topo-site img{
     position: relative;
     animation: levitar 3s ease-in-out infinite alternate;
-    box-shadow: 10px 15px 10px #cb09b5;
+    box-shadow: 10px 15px 10px #cb09b480;
     border-radius: 50%;
 }
 
@@ -160,6 +173,52 @@ section.topo-do-site .flex{
         top: 30px;
     }
 }
+
+/* MEIO DO SITE */
+
+section.produtos{
+    padding: 250px 12%;
+}
+
+.produtos .flex{
+    gap: 60px;
+}
+
+.produtos .produtos-box{
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top:  45px;
+    transition: .4s;
+}
+.produtos .produtos-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.421);
+}
+
+.produtos .produtos-box i{
+    font-size: 70px;
+    color: #b49d0a;
+}
+
+.produtos .produtos-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+    color:  rgb(232, 228, 228);
+    text-shadow: #060606 4px 4px 17px;
+    word-spacing: 10px; /* Esta propriedade controla o espaçamento entre as palavras do texto. */
+}
+
+.produtos .produtos-box p{
+    color: #aaaaae;
+    font-weight: 300;
+    text-shadow: #060606 4px 4px 10px;
+}
+
+.cabecalho-home a{
+   text-decoration:  none;
+}
+
 
 
 
