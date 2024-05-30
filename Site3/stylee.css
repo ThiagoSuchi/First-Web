@@ -1,15 +1,26 @@
-
 /* ESTILO DA ABA MODA-FIT */
 
-section.lista-produtos{
-    padding: 80px 4%;
+.primeira-parte-lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-section.lista-produtos .flex{
-justify-content: space-around;
+.segunda-parte-lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+
+.titulo{
+    padding: 0px 10px 200px 10px;
 }
 
-.img-port{
+section.lista-produtos {
+    padding: 0px 4%;
+}
+
+.img-port {
     width: 360px;
     height: 460px;
     background-color: #cb09b5;
@@ -19,19 +30,21 @@ justify-content: space-around;
     cursor: pointer;
     border-radius: 40px;
     position: relative;
+    margin-bottom: 100PX;
+    
 }
 
-.img-port:hover{
+.img-port:hover {
     background-position: 100% 100%;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0000007a;
+    background-color: #000000cf;
     border-radius: 40px;
     display: flex;
     align-items: center;
@@ -39,4 +52,12 @@ justify-content: space-around;
     font-size: 24px;
     font-weight: 600;
     color: white;
+    opacity: 0;
+    transition: .9s;
 }
+
+.overlay:hover {
+    opacity: 1;
+    text-shadow: 15px 9px 6px #fefefe78;
+}
+

@@ -1,9 +1,14 @@
 /* ESTILO GERAL */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 10px;
 }
 
 body {
@@ -88,13 +93,29 @@ header>.interface .btn-contato{
     color: #bab9b9;
     text-decoration: none;
     display: inline-block;
+    position: relative;
+}
+
+.interface-int li a::after{
+    content: " ";
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.interface-int ul li a:hover::after {
+    width: 110%;
+    background-color: white;
 }
 
 .interface-int ul li a:hover {
+    width: 110%;
     color: white;
     transform: scale(1.05);
     transition: .2s;
-    text-shadow: 0px 0px 10px #040403;
 }
 
 header nav ul {
@@ -218,6 +239,7 @@ section.produtos{
 .cabecalho-home a{
    text-decoration:  none;
 }
+
 
 
 
