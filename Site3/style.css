@@ -12,12 +12,14 @@ html{
 }
 
 body {
-    background: linear-gradient(40deg, #060606,#2d2e2e,#464647,#6b6b6c,#969798);
+    background: linear-gradient(50deg, #060606,#2d2e2e,#464647,#7c7c7d,#a3a4a5);
     animation: colors 15s ease alternate infinite;
     place-items: center;
     min-height: 100vh;
     justify-content: center;
-    background-size: 300% 300%;
+    background-color: #060606;
+    background-size: 300% 300%; 
+    position: relative;
 }
 
 @keyframes colors{
@@ -51,18 +53,91 @@ body {
 }
 
 
-
 /* ESTILO DO CABEÇALHO*/
 
+#menu-scroll {
+    right: 70px;
+    position: fixed;
+    display: flex;
+    gap: 30px;
+    transition: .8s;
+    z-index: 2;
+}
+#menu-scroll.rolagem{
+    background-color: rgb(194, 193, 190);
+    padding: 8px 5%;
+    top: 0;
+    border-bottom-left-radius: 100px;
+    right: 0px;
+}
+
+#menu-scroll.rolagem ul li a:hover::after{
+    width: 110%;
+    background-color: rgb(0, 0, 0);
+}
+
+#menu-scroll.rolagem button:hover{
+    box-shadow: 0px 0px 4px #780769;
+    transform: scale(1.00);
+    transition: .2s;
+}
+
+#menu-scroll.rolagem a{
+    color: #7c7c7d;
+}
+
+#menu-scroll nav ul{
+    padding-right: 5px;
+}
+
+.pesquisar-box{
+   background: #f9e55f;
+   height: 40px;
+   padding: 10px;
+   border-radius: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-right: 130px;
+   margin-top: 5px;
+   
+}
+
+.pesquisar-txt{
+    border: none;
+    background: none;
+    outline: none;
+    width: 0px;
+    font-size: 16px;
+    line-height: 40px;
+    color: rgb(65, 62, 62);
+    transition: .5s;
+}
+
+.pesquisar-box:hover > .pesquisar-txt{
+    width: 220px;
+}
+
+.btn-buscar{
+    color: #7c7c7d;
+    font-size: 22px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .imagem-logo-agnuz {
     width: 350px;
     padding: 20px 4%;
+    transition: .3s;
 }
 
 .imagem-logo-agnuz:hover {
     transform: scale(1.60);
-    transition: .7s;
+   
 }
 
 header {
@@ -72,7 +147,6 @@ header {
 header>.interface {
     display: flex;
     justify-content: space-between;
-    
 }
 
 header>.interface .btn-contato{
@@ -216,6 +290,7 @@ h2.titulo{
     font-size: 38px;
     text-align: center;
     word-spacing: 5px;
+    padding-top: 100px;
 }
 
 h2.titulo span{
@@ -296,6 +371,58 @@ form .btn-enviar input{
     font-weight: 400;
     cursor: pointer;
 }
+
+/* RODAPÉ DO SITE */
+footer{
+    padding: 50px 4%;
+    box-shadow: 0 0 40px 10px #949394a0;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 4px solid rgba(144, 9, 126, 0.725);
+}
+
+footer .line-footer p i{
+    color: #d1b649;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: white;
+}
+
+.imagem{
+    width: 160px;
+}
+
+.btn-rodape button{
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    background-color: #d1b649;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+.btn-rodape button:hover{
+    box-shadow: 0px 0px 6px #f7dc2e;
+    transform: scale(1.02);
+    transition: .1s;
+}
+
+
+
 
 
 

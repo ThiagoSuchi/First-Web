@@ -19,39 +19,51 @@
 </head>
 
 <body class="corpo-pagina">
-    <section id="inicio-cabeçalho">
-        <header class="interface-int">
+    <section id="inicio-cabecalho">
+        <header  id="inicio-int" class="interface-int">
             <div class="interface">
                 <div class="logo">
                     <a href="#">
                         <img class="imagem-logo-agnuz" src="img/agnuz.png" alt="Logo site agnuz">
                     </a>
                 </div><!--logo-->
+                <div id="menu-scroll">
+                   
 
-                <nav class="menu-desktop">
-                    <ul>
-                        <li><a class="estilo-cbç" href="#inicio-cabeçalho">Inicio</a></li>
-                        <li><a class="estilo-cbç" href="#produtos-link">Produtos</a></li>
-                        <li><a class="estilo-cbç" href="#">Sobre</a></li>
-                        <li><a class="estilo-cbç" href="#">Suporte</a></li>
-                    </ul>
-                </nav>
+                    <nav class="menu-desktop">
+                        <ul>
+                            <li><a class="estilo-cbç" href="#inicio-int">Home</a></li>
+                            <li><a class="estilo-cbç" href="#produtos-link">Produtos</a></li>
+                            <li><a class="estilo-cbç" href="#sobre-agnuz">Sobre</a></li>
+                            <li><a class="estilo-cbç" href="#suporte-formulario">Suporte</a></li>
+                        </ul>
+                    </nav>
 
-                <div class="btn-contato">
-                    <a href="#">
-                        <button>Entrar</button>
-                    </a>
-                    <div class="btn-contato">
-                        <a href="#">
-                            <button>cadastrar</button>
+                    <div class="pesquisar-box">
+                        <input type="text" class="pesquisar-txt" placeholder="Oque está procurando?">
+                        <a href="#" class="btn-buscar">
+                            <i class="bi bi-search"></i>
                         </a>
-                    </div>
-                </div><!--interface-->
+                    </div><!--pesquisar-box-->
+
+                    <div class="btn-contato">
+
+                        <a href="#">
+                            <button>Entrar</button>
+                        </a>
+
+                        <a href="#">
+                            <button>Cadastrar</button>
+                        </a>
+
+                    </div><!--btn-contato-->
+                </div><!--menu-scroll-->
+            </div><!--interface-->
         </header>
     </section><!--inicio-cabeçalho-->
 
     <main>
-        <section class="topo-do-site">
+        <section id="sobre-agnuz" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
@@ -74,11 +86,10 @@
 
                         <div class="btn-contato">
 
-                            <a href="#">
-
+                            <a href="#contate-nos">
                                 <button>Entre em contato</button>
-
                             </a>
+
                         </div>
                     </div><!--txt-top-site-->
 
@@ -91,8 +102,8 @@
             </div><!--interface-->
         </section><!--topo-do-site-->
 
-        <section id="produtos-link" class="produtos">
-            <div class="interface">
+        <section class="produtos">
+            <div id="produtos-link" class="interface">
                 <h2 class="titulo"> ESTILO, SAÚDE E <span>QUALIDADE DE VIDA.</span></h2>
                 <div class="flex">
                     <nav class="cabecalho-home">
@@ -144,9 +155,9 @@
         </section><!--sobre-->
 
         <section class="formulario">
-            <div class="interface">
+            <div id="suporte-formulario" class="interface">
                 <h2 class="titulo">FALE <span>CONOSCO.</span></h2>
-                <form method="post" action="envia.php">
+                <form method="" action="">
                     <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
                     <input type="text" name="email" id="email" placeholder="Seu e-mail:" required>
                     <input type="text" name="telefone" id="telefone" placeholder="Seu número p/contato:">
@@ -159,22 +170,29 @@
     </main>
 
     <footer>
-        <div class="interface">
+        <div id="contate-nos" class="interface">
             <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img class="imagem" src="./img/logsecundaria.png" alt="logo logo agnuz">
+                    </div><!--logo-footer-->
 
-                <div class="logo-footer">
-                    <img src="./img/agnuz.png" alt="logo-insta">
-                </div><!--logo-footer-->    
-                
+                    <div class="btn-rodape">
+                        <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
+                        <a href="#"><button><i class="bi bi-youtube"></i></button></a>
+                    </div>
+                </div>
             </div><!--line-footer-->
 
-            <div class="line-footer">
-
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-at-fill"></i><a href="mailto:agnuzprofit@gmail.com"> agnuzprofit@gmail.com
+                    </a></p>
             </div><!--line-footer-->
 
         </div><!--interface-->
     </footer>
-
+    <script src="menu.js"></script>
 </body>
 
 </html>
