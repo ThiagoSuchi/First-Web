@@ -1,35 +1,39 @@
 /* ESTILO GERAL */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 10px;
 }
 
-body {
-    background: linear-gradient(50deg, #060606,#2d2e2e,#464647,#7c7c7d,#a3a4a5);
+
+
+#paginas-principal{
+    background: linear-gradient(50deg, #060606, #2d2e2e, #464647, #7c7c7d, #a3a4a5);
     animation: colors 15s ease alternate infinite;
     place-items: center;
     min-height: 100vh;
     justify-content: center;
     background-color: #060606;
-    background-size: 300% 300%; 
+    background-size: 300% 300%;
     position: relative;
 }
 
-@keyframes colors{
+@keyframes colors {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
-    100%{
+
+    100% {
         background-position: 0% 40%;
     }
 }
@@ -38,20 +42,9 @@ body {
     margin: 0 auto;
 }
 
-.flex{
-  display: flex;
+.flex {
+    display: flex;
 }
-
-.btn-contato button {
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 400;
-    background-color: #f4db35;
-    border-radius: 15px;
-    border: 0;
-    cursor: pointer;
-}
-
 
 /* ESTILO DO CABEÇALHO*/
 
@@ -63,47 +56,137 @@ body {
     transition: .8s;
     z-index: 2;
 }
-#menu-scroll.rolagem{
-    background-color: rgb(194, 193, 190);
+
+#menu-scroll.rolagem {
+    background-color: rgb(233, 233, 230);
     padding: 8px 5%;
     top: 0;
     border-bottom-left-radius: 100px;
     right: 0px;
 }
 
-#menu-scroll.rolagem ul li a:hover::after{
+#menu-scroll.rolagem ul li a:hover::after {
     width: 110%;
     background-color: rgb(0, 0, 0);
 }
 
-#menu-scroll.rolagem button:hover{
+#menu-scroll.rolagem button:hover {
     box-shadow: 0px 0px 4px #780769;
     transform: scale(1.00);
     transition: .2s;
 }
 
-#menu-scroll.rolagem a{
+#menu-scroll.rolagem a {
     color: #7c7c7d;
 }
 
-#menu-scroll nav ul{
+#menu-scroll nav ul {
     padding-right: 5px;
 }
 
-.pesquisar-box{
-   background: #f9e55f;
-   height: 40px;
-   padding: 10px;
-   border-radius: 40px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin-right: 130px;
-   margin-top: 5px;
-   
+#menu-scroll.rolagem .carrinho-compras i{
+    color: rgb(126, 120, 120);
+    transition: .3s;
 }
 
-.pesquisar-txt{
+#menu-scroll.rolagem .carrinho-compras i:hover {
+    transform: scale(1.10);
+}
+
+#menu-scroll.rolagem .carrinho-compras span{
+    color: rgb(233, 228, 228);
+    background:  rgb(126, 120, 120);
+}
+
+.carrinho-compras{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 85px;
+    margin-left: -33px;
+}
+
+.carrinho-compras i{
+    font-size: 30px;
+    transition: .3s;
+    color: #e0d173;
+}
+
+.carrinho-compras i:hover{
+    color: white;
+    text-shadow: 0 0 5px white;
+}
+
+.carrinho-compras span{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    background-color: #fbf2b7;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+}
+
+#menu-scroll.rolagem .btn-login a {
+    border: 2px solid rgb(151, 145, 145);
+    align-items: center;
+}
+#menu-scroll.rolagem .btn-login a:hover{
+    background-color:rgb(151, 145, 145);
+    color: white;
+}
+
+.btn-login .cadastro{
+    background-color: #e0d173;
+    color: #2d2e2e;
+}
+
+.btn-login .cadastro:hover{
+    transform: scale(1.02);
+    background-color: #eae4bf;
+    border: 2px solid #eae4bf;
+    color: #2d2e2e;
+}
+
+
+.btn-login a {
+    border: 2px solid #e0d173;
+    padding: 12px;
+    margin-left: 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bab9b9;
+    transition: .4s;
+}
+
+.btn-login:hover a {
+    background-color: #e2d687;
+    color: #2d2e2e;
+    border: 2px solid  #e2d687;
+}
+
+.pesquisar-box {
+    background: #e6d87b;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 80px;
+    margin-top: 6.5px;
+
+}
+
+.pesquisar-txt {
     border: none;
     background: none;
     outline: none;
@@ -111,22 +194,30 @@ body {
     font-size: 16px;
     line-height: 40px;
     color: rgb(65, 62, 62);
-    transition: .5s;
+    transition: .4s;
 }
 
-.pesquisar-box:hover > .pesquisar-txt{
+.pesquisar-box:hover > .pesquisar-txt {
     width: 220px;
+    padding: 0 6px;
 }
 
-.btn-buscar{
+.pesquisar-box:hover > .btn-buscar{
+    background: white;
+    width: 34px;
+    height: 34px; 
+}
+
+.btn-buscar {
     color: #7c7c7d;
     font-size: 22px;
     width: 20px;
-    height: 20px;
+    height: 20px; 
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .4s;
 }
 
 .imagem-logo-agnuz {
@@ -137,7 +228,7 @@ body {
 
 .imagem-logo-agnuz:hover {
     transform: scale(1.60);
-   
+
 }
 
 header {
@@ -149,7 +240,7 @@ header>.interface {
     justify-content: space-between;
 }
 
-header>.interface .btn-contato{
+header>.interface .btn-login {
     display: flex;
     gap: 30px;
 }
@@ -161,7 +252,7 @@ header>.interface .btn-contato{
     position: relative;
 }
 
-.interface-int li a::after{
+.interface-int li a::after {
     content: " ";
     width: 0%;
     height: 1px;
@@ -178,7 +269,7 @@ header>.interface .btn-contato{
 
 .interface-int ul li a:hover {
     width: 110%;
-    color: white;
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
     transition: .2s;
 }
@@ -193,7 +284,8 @@ header nav ul li {
     padding: 15px 40px;
 }
 
-.btn-contato button:hover, form .btn-enviar input:hover{
+.btn-login button:hover,
+form .btn-enviar input:hover {
     box-shadow: 0px 0px 5px #f1de60;
     transform: scale(1.00);
     transition: .2s;
@@ -203,36 +295,36 @@ header nav ul li {
 /* ESTILO DO TOPO DO SITE */
 
 
-section.topo-do-site{
+section.topo-do-site {
     padding: 85px 7%;
     margin-top: 100px;
 }
 
-section.topo-do-site .flex{
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 120px;
     margin-top: 100px;
 }
 
-.topo-do-site h1{
+.topo-do-site h1 {
     color: white;
     font-size: 42px;
     line-height: 40px;
 
 }
 
-.topo-do-site .txt-topo-site h1 span{
+.topo-do-site .txt-topo-site h1 span {
     color: rgb(249, 248, 246);
     text-shadow: #cb09b5 4px 2px 2px;
 }
 
-.topo-do-site h2{
+.topo-do-site h2 {
     color: rgb(176, 173, 173);
     font-weight: 400;
 }
 
-.topo-do-site h2 span{
+.topo-do-site h2 span {
     font-weight: 980;
 }
 
@@ -241,51 +333,62 @@ section.topo-do-site .flex{
     font-weight: 980;
 }
 
-.topo-do-site .txt-topo-site p{
+.topo-do-site .txt-topo-site p {
     color: rgb(176, 173, 173);
     margin: 50px 0;
 }
 
-.topo-do-site .img-topo-site img{
+.topo-do-site .img-topo-site img {
     position: relative;
     animation: levitar 3s ease-in-out infinite alternate;
     box-shadow: 10px 15px 10px #cb09b480;
     border-radius: 50%;
 }
 
-@keyframes levitar{
-    0%{
+@keyframes levitar {
+    0% {
         top: 0;
     }
-    100%{
+
+    100% {
         top: 30px;
     }
 }
 
+.btn-login {
+    width: 200px;
+}
+
+.btn-login .cadastro {
+    width: 188px;
+    align-items: center;
+}
+
 /* MEIO DO SITE */
 
-section.produtos{
+section.produtos {
     padding: 200px 12%;
     margin-top: 200px;
 }
 
-.produtos .flex{
+.produtos .flex {
     gap: 60px;
 }
 
-.produtos .produtos-box{
+.produtos .produtos-box {
     color: white;
     padding: 40px;
     border-radius: 20px;
-    margin-top:  45px;
+    margin-top: 45px;
     transition: .4s;
 }
-.produtos .produtos-box:hover{
+
+.produtos .produtos-box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.421);
 }
 
-h2.titulo{
+h2.titulo {
     color: white;
     font-size: 38px;
     text-align: center;
@@ -293,31 +396,32 @@ h2.titulo{
     padding-top: 100px;
 }
 
-h2.titulo span{
+h2.titulo span {
     color: #c3aa08;
 }
 
-.produtos .produtos-box i{
+.produtos .produtos-box i {
     font-size: 70px;
     color: #b49d0a;
 }
 
-.produtos .produtos-box h3{
+.produtos .produtos-box h3 {
     font-size: 28px;
     margin: 15px 0;
-    color:  rgb(232, 228, 228);
+    color: rgb(232, 228, 228);
     text-shadow: #060606 4px 4px 17px;
-    word-spacing: 10px; /* Esta propriedade controla o espaçamento entre as palavras do texto. */
+    word-spacing: 10px;
+    /* Esta propriedade controla o espaçamento entre as palavras do texto. */
 }
 
-.produtos .produtos-box p{
+.produtos .produtos-box p {
     color: #aaaaae;
     font-weight: 300;
     text-shadow: #060606 4px 4px 10px;
 }
 
-.cabecalho-home a{
-   text-decoration:  none;
+.cabecalho-home a {
+    text-decoration: none;
 }
 
 /* ESTILIZAÇÃO DO FORMÚLARIO */
@@ -329,7 +433,7 @@ section.formulario {
     border-radius: 19px;
 }
 
-form{
+form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
@@ -339,7 +443,8 @@ form{
     margin-top: 50px;
 }
 
-form input, form textarea{
+form input,
+form textarea {
     width: 100%;
     background-color: #06060657;
     border: 0;
@@ -350,21 +455,22 @@ form input, form textarea{
     font-size: 18px;
 }
 
-form input::placeholder{ /* O pseudoelemento CSS representa o texto do espaço reservado em um elemento*/
+form input::placeholder {
+    /* O pseudoelemento CSS representa o texto do espaço reservado em um elemento*/
     color: rgba(254, 254, 254, 0.286);
 }
 
-form textarea{
+form textarea {
     resize: none;
     height: 180px;
 }
 
-form .btn-enviar{
+form .btn-enviar {
     margin-top: 20px;
     text-align: center;
 }
 
-form .btn-enviar input{
+form .btn-enviar input {
     width: 120px;
     background-color: #c3aa08;
     color: #060606e6;
@@ -373,37 +479,37 @@ form .btn-enviar input{
 }
 
 /* RODAPÉ DO SITE */
-footer{
+footer {
     padding: 50px 4%;
     box-shadow: 0 0 40px 10px #949394a0;
 }
 
-footer .flex{
+footer .flex {
     justify-content: space-between;
 }
 
-footer .line-footer{
+footer .line-footer {
     padding: 20px 0;
 }
 
-.borda{
+.borda {
     border-top: 4px solid rgba(144, 9, 126, 0.725);
 }
 
-footer .line-footer p i{
+footer .line-footer p i {
     color: #d1b649;
     font-size: 22px;
 }
 
-footer .line-footer p a{
+footer .line-footer p a {
     color: white;
 }
 
-.imagem{
+.imagem {
     width: 160px;
 }
 
-.btn-rodape button{
+.btn-rodape button {
     width: 60px;
     height: 60px;
     font-size: 22px;
@@ -415,25 +521,8 @@ footer .line-footer p a{
     transition: .2s;
 }
 
-.btn-rodape button:hover{
+.btn-rodape button:hover {
     box-shadow: 0px 0px 6px #f7dc2e;
     transform: scale(1.02);
     transition: .1s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
