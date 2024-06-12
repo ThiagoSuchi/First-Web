@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* TOPO DO SITE */
+
+header {
+    position: fixed;
+    margin-top: -26px;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 600px;
+    gap: 10%;
+    z-index: 2;
+    /* A z-indexpropriedade CSS define a ordem z de um elemento posicionado e seus descendentes ou itens flexíveis e de grade. Elementos sobrepostos com índice z maior cobrem aqueles com índice z menor. */
+
+    & img {
+        width: 250px;
+    }
+
+    & nav {
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            margin-top: -25px;
+        }
+    }
+}
+
+
+/* CORPO DO SITE */
+
+section {
+    background-image: radial-gradient(#c862f8, #6505a6);
+    height: 150vh;
+    position: relative;
+    
+    
+
+    & .list {
+        width: 70vw;
+        height: 100%;
+        margin: auto;
+        position: relative;
+
+        & .item {
+            position: absolute;
+            inset: 0;
+            top: 200px;
+
+            & .car-img {
+                position: absolute;
+                top: 47%;
+                transform: translateY(-50%);
+                width: 70%;
+
+                & img {
+                    width: 100%;
+                    transform: rotate(-30deg);
+                }
+            }
+
+            & .content {
+                position: absolute;
+                right: 100px;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;/* joga tudo para baixo */
+                align-items: end;
+                gap: 10px;
+
+                & .car-inf {
+                    font-weight: bold;
+                    margin-bottom: -130px;
+                }
+
+                & h2 {
+                    margin-bottom: -130px;
+                    font-size: 5em;
+                    line-height: 5em;
+                    font-family: "League+Gothic", sans-serif;
+                }
+
+                & .description {
+                    color: rgb(208, 206, 206);
+                    font-size: 12px;
+                    text-align: right;
+                    max-width: 400px;
+                }
+
+                & .information {
+                    border-radius: 30px;
+                    height: 35px;
+                    width: 120px;
+                    text-transform: uppercase;
+                    border: 2px solid #7f3d9e;
+                    background-color: #beff1b;
+                    color: black;
+                    cursor: pointer;
+                    font-weight: bold;
+                    font-family: "League+Gothic", sans-serif;
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 100%;
+            top: 54.6%;
+            border-top: 1px solid white;
+        }
+    }
+
+    
+    .arrows {
+        width: 70vw;
+        position: absolute;
+        top: 54.6%;
+        left: 50%;
+        transform: translate(-50%, -25px);
+        display: flex;
+        justify-content: space-between;
+
+        & button:nth-child(1) {
+            & img {
+                transform: scale(-1);
+            }
+        }
+
+        & button {
+            top: 60%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            & img {
+                width: 30px;
+                margin-top: 4px;
+                cursor: pointer;
+            }
+            
+            &:hover {
+                background-color: #beff1b;
+            }
+        }
+    }
+
+    .indcators {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%);
+        height: 200px;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: end;
+        gap: 15px;
+
+        & .number {
+            font-size: 5em;
+            font-family: "League+Gothic", sans-serif;
+        }
+
+        & ul {
+            display: flex;
+            gap: 10px;
+
+            & li {
+                width: 50px;
+                height: 4px;
+                background-color: #beff1b;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+
+            & .active {
+                background-color: white;
+            }
+        }
+    }
+
+}
+
