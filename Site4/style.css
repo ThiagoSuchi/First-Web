@@ -48,8 +48,8 @@ section {
     background-image: radial-gradient(#c862f8, #6505a6);
     height: 150vh;
     position: relative;
-    
-    
+
+
 
     & .list {
         width: 70vw;
@@ -72,6 +72,18 @@ section {
                     width: 100%;
                     transform: rotate(-30deg);
                 }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: black;
+                    width: 96%;
+                    height: 85px;
+                    top: 140%;
+                    left: 50px;
+                    border-radius: 10px;
+                    filter: blur(56px);
+                }
             }
 
             & .content {
@@ -81,7 +93,8 @@ section {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;/* joga tudo para baixo */
+                justify-content: center;
+                /* joga tudo para baixo */
                 align-items: end;
                 gap: 10px;
 
@@ -94,7 +107,7 @@ section {
                     margin-bottom: -130px;
                     font-size: 5em;
                     line-height: 5em;
-                    font-family: "League+Gothic", sans-serif;
+                    font-family: "League Gothic", sans-serif;
                 }
 
                 & .description {
@@ -109,7 +122,7 @@ section {
                     height: 35px;
                     width: 120px;
                     text-transform: uppercase;
-                    border: 2px solid #7f3d9e;
+                    border: 2px solid #ab3cf5;
                     background-color: #beff1b;
                     color: black;
                     cursor: pointer;
@@ -129,7 +142,7 @@ section {
         }
     }
 
-    
+
     .arrows {
         width: 70vw;
         position: absolute;
@@ -152,12 +165,13 @@ section {
             border-radius: 50%;
             border: none;
             cursor: pointer;
+
             & img {
                 width: 30px;
                 margin-top: 4px;
                 cursor: pointer;
             }
-            
+
             &:hover {
                 background-color: #beff1b;
             }
@@ -192,6 +206,7 @@ section {
                 transition: 0.5s;
             }
 
+            /*------------------------------------- .ACTIVE ------------------------------------------*/
             & .active {
                 background-color: white;
             }
@@ -200,3 +215,76 @@ section {
 
 }
 
+/* SOBREPOSIÇÃO AO PRIMEIRO SECTION */
+
+section {
+
+    & .list {
+        --calculation: 1;
+
+        & .item {
+            transform: translateX(calc(100vw * var(--calculation)));
+            transition: 0.5s;
+            opacity: 0;
+
+            & .car-img {
+                & img {
+                    transform: rotate(0);
+                    transition: 0.5s;
+                    transition-delay: 0.3s;
+                }
+            }
+
+            & .content {
+
+                & .car-inf,
+                h2,
+                .description,
+                .information {
+                    transform: translateX(calc(200px * var(--calculation)));
+                    transition: 0.7s;
+                    transition-delay: 0.3s;
+                    opacity: 0;
+                }
+
+                & h2 {
+                    transition-delay: 0.5s;
+                }
+
+                & .description {
+                    transition-delay: 0.7s;
+                }
+
+                & .information {
+                    transition-delay: 0.9s;
+                }
+
+            }
+        }
+
+        /*------------------------------------- .ACTIVE ------------------------------------------*/
+        & .active {
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+
+            & .car-img {
+                & img {
+                    transform: rotate(-30deg);
+                }
+            }
+
+            & .content {
+
+                & .car-inf,
+                h2,
+                .description,
+                .information {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+
+            }
+        }
+    }
+}

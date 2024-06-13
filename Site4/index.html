@@ -28,36 +28,74 @@
         <!--Não é necessário que todos os links estejam contidos em um <nav>elemento. <nav>destina-se apenas a um grande bloco de links de navegação.-->
     </header>
 
-    <section>
+    <section class="container">
         <div class="list">
-            <div class="item">
+
+            <div class="item active">
                 <div class="car-img">
-                    <img src="./img/1.png" alt="img-carro-cinza">
+                    <img src="./img/1.png" alt="img-Porsche">
                 </div>
                 <div class="content">
                     <p class="car-inf">
-                        Único Dono
+                        2024 - 640 Cavalos/P
                     </p>
                     <h2>
-                        Porsche
+                        Porsche 911 Turbo S
                     </h2>
                     <p class="description">
-                        O Porsche 911 Turbo S é um carro esportivo de alto desempenho que combina luxo, tecnologia
-                        avançada e uma dinâmica de condução excepcional. É projetado para aqueles que buscam a melhor
-                        experiência de condução, seja em pistas de corrida ou nas estradas do dia a dia. Com sua
-                        aceleração impressionante, velocidade máxima elevada e design icônico, o 911 Turbo S continua a
-                        ser uma referência entre os carros esportivos de elite.
+                        O Porsche 911 Turbo S | é um carro esportivo de alto desempenho que combina luxo, tecnologia avançada e uma dinâmica de condução excepcional. É projetado para aqueles que buscam a melhor experiência de condução, seja em pistas de corrida ou nas estradas do dia a dia. Com sua aceleração impressionante, velocidade máxima elevada e design icônico, o 911 Turbo S continua a ser uma referência entre os carros esportivos de elite.
                     </p>
                     <button class="information">
                         Saiba mais
                     </button>
                 </div><!--content-->
             </div><!--item-->
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="./img/2.png" alt="img-Ferrari">
+                </div>
+                <div class="content">
+                    <p class="car-inf">
+                        2020 - Conversível
+                    </p>
+                    <h2>
+                        Ferrari Portofino
+                    </h2>
+                    <p class="description">
+                        A Ferrari Portofino | é um exemplo de excelência italiana no mundo dos supercarros conversíveis, combinando estilo sofisticado, desempenho excepcional e tecnologia avançada para oferecer uma experiência de condução emocionante e luxuosa. A Portofino apresenta um design aerodinâmico e fluído, com linhas que combinam elegância e agressividade típicas da Ferrari.
+                    </p>
+                    <button class="information">
+                        Saiba mais
+                    </button>
+                </div><!--content-->
+            </div><!--item-->
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="./img/3.png" alt="img-Lamborghini">
+                </div>
+                <div class="content">
+                    <p class="car-inf">
+                        2022 - VM: 350 km/h 
+                    </p>
+                    <h2>
+                        Lamborghini Aventador S
+                    </h2>
+                    <p class="description">
+                        A Lamborghini Aventador S | é uma obra-prima da engenharia automotiva e um ícone de design e desempenho. Lamborghini Aventador S não é apenas um carro esportivo, mas uma obra de arte sobre rodas que combina desempenho extremo com um design icônico e luxuoso.A direção é precisa e responsiva, proporcionando uma sensação de controle total sobre a estrada.A dianteira é dominada por entradas de ar enormes e faróis afilados, dando-lhe uma aparência predatória.
+                    </p>
+                    <button class="information">
+                        Saiba mais
+                    </button>
+                </div><!--content-->
+            </div><!--item-->
+
         </div><!--list-->
 
         <div class="arrows">
-            <button><img src="./img/arrow.png" alt="seta-direita"></button>
-            <button><img src="./img/arrow.png" alt="seta-esquerda"></button>
+            <button id="prev"><img src="./img/arrow.png" alt="seta-direita"></button>
+            <button id="next"><img src="./img/arrow.png" alt="seta-esquerda"></button>
         </div><!--arrows-->
 
         <div class="indcators">
@@ -69,6 +107,8 @@
             </ul>
         </div><!--indcators-->
     </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
