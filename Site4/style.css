@@ -34,9 +34,19 @@ header {
 
     & nav {
         & ul {
-            display: grid;
-            grid-template-columns: repeat(3, 200px);
+            display: flex;
+            justify-content: space-between;
             margin-top: -25px;
+        }
+        
+        & ul li {
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        & ul li:hover {
+            color: #aff107;
+            transform: scale(1.05);
         }
     }
 }
@@ -94,7 +104,6 @@ section {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                /* joga tudo para baixo */
                 align-items: end;
                 gap: 10px;
 
@@ -128,6 +137,17 @@ section {
                     cursor: pointer;
                     font-weight: bold;
                     font-family: "League+Gothic", sans-serif;
+                }
+
+                & .information:hover{
+                    transform: scale(1.05);
+                    background-color: white;
+                    transition: .2s;
+                }
+
+                & .information a {
+                    text-decoration: none;
+                    color: black;
                 }
             }
         }
