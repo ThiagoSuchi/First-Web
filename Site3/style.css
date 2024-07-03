@@ -153,7 +153,6 @@ html {
     color: #2d2e2e;
 }
 
-
 .btn-login a {
     border: 2px solid #e0d173;
     padding: 12px;
@@ -171,6 +170,25 @@ html {
     background-color: #e2d687;
     color: #2d2e2e;
     border: 2px solid  #e2d687;
+}
+
+#menu-scroll.rolagem .pesquisar-box {
+    background: rgb(126, 120, 120);
+}
+
+#menu-scroll.rolagem .pesquisar-txt{
+    color: white;
+}
+
+#menu-scroll.rolagem .btn-buscar{
+    color: white;
+}
+#menu-scroll.rolagem .pesquisar-box:hover > .btn-buscar{
+    color: #5f5f61
+}
+
+#menu-scroll.rolagem .pesquisar-box:hover > ::placeholder{
+    color: rgb(216, 216, 216);
 }
 
 .pesquisar-box {
@@ -367,25 +385,8 @@ section.topo-do-site .flex {
 /* MEIO DO SITE */
 
 section.produtos {
-    padding: 200px 12%;
+    padding: 80px 4%;
     margin-top: 200px;
-}
-
-.produtos .flex {
-    gap: 60px;
-}
-
-.produtos .produtos-box {
-    color: white;
-    padding: 40px;
-    border-radius: 20px;
-    margin-top: 45px;
-    transition: .4s;
-}
-
-.produtos .produtos-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.421);
 }
 
 h2.titulo {
@@ -400,28 +401,71 @@ h2.titulo span {
     color: #c3aa08;
 }
 
-.produtos .produtos-box i {
-    font-size: 70px;
-    color: #b49d0a;
+section.produtos .flex{
+    justify-content: space-around;/* ESTÁ CENTRALIZANDO E DANDO ESPAÇAMENTO ENTRE OS CONTAINERS */
+    margin-top: 90px 
 }
 
-.produtos .produtos-box h3 {
-    font-size: 28px;
-    margin: 15px 0;
-    color: rgb(232, 228, 228);
-    text-shadow: #060606 4px 4px 17px;
-    word-spacing: 10px;
-    /* Esta propriedade controla o espaçamento entre as palavras do texto. */
+.img-port{
+    width: 400px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 60px;
+    position: relative;
 }
 
-.produtos .produtos-box p {
-    color: #aaaaae;
-    font-weight: 300;
-    text-shadow: #060606 4px 4px 10px;
+.img-port:hover{
+    background-position: 100% 100%;
 }
 
-.cabecalho-home a {
-    text-decoration: none;
+.overlay img{
+    margin: 20px auto;
+    width: 95px;
+}
+
+.overlay .artg-icon{
+    width: 80px;
+}
+
+.overlay .suplement-icon{
+    width: 87px;
+}
+
+.overlay p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #a3a4a5;
+    margin: 34px auto;
+    text-shadow: 4px 4px 7px #060606;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #121212eb;
+    color: rgb(250, 236, 236);
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
 }
 
 /* ESTILIZAÇÃO DO FORMÚLARIO */
